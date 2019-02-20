@@ -1,0 +1,32 @@
+<h3>FormGroup Örnek</h3>
+<p></p>
+<form [formGroup]="kisiForm" (ngSubmit)="onSubmit()">
+  <div class="form-group input-group">
+    <div class="input-group-prepend">
+      <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+    </div>
+    <input name="" class="form-control" placeholder="Ad Soyad" type="text" formControlName="adi">
+  </div>
+  <div class="form-group input-group">
+    <div class="input-group-prepend">
+      <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+    </div>
+    <input name="" class="form-control" placeholder="Email" type="email" formControlName="email">
+  </div>
+  <div class="form-group input-group">
+    <div class="input-group-prepend">
+      <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
+    </div>
+    <input name="" class="form-control" placeholder="Phone number" type="text" formControlName="telefon">
+  </div>
+  <div class="form-group input-group">
+    <div class="input-group-prepend">
+      <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+    </div>
+    <input class="form-control" placeholder="Şifre" type="password" formControlName="sifre">
+  </div>
+  <div class="form-group">
+    <button type="submit" class="btn btn-warning btn-block"> Kaydet</button>
+  </div>
+</form>
+<p><b>{{kisi|json}}</b></p>

@@ -1,0 +1,35 @@
+<h3>FormArray-2 Örnek</h3>
+<p></p>
+<form [formGroup]="kisiForm" (ngSubmit)="onSubmit()">
+
+  <div formArrayName="iletisimBilgileri" class="mt-2">
+    <div
+      *ngFor="let iletisim of kisiForm.controls.iletisimBilgileri.controls let c=index; let first = first; let last = last;"
+      [formGroupName]="c">
+      <div class="form-group input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text"> <i class="fa fa-mail-forward"></i> </span>
+        </div>
+        <input name="" class="form-control" placeholder="Email" type="text" formControlName="email">
+      </div>
+      <div class="form-group input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
+        </div>
+        <input name="" class="form-control" placeholder="Telefon" type="text" formControlName="telefon">
+      </div>
+    </div>
+  </div>
+  <div class="form-group mt-2 pull-right">
+    <button class="btn btn-warning" (click)="yeniIletisimEkle()"> Yeni İletisim Ekle</button>
+    <button type="submit" class="btn btn-success" [disabled]="!kisiForm.valid"> Kaydet</button>
+  </div>
+  <div class="form-group mt-2 ">
+    <p><b>{{kayit|json}}</b></p>
+  </div>
+</form>
+
+
+
+
+

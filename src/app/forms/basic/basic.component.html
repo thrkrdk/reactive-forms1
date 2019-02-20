@@ -1,0 +1,14 @@
+<h3> FormControl Örnek</h3>
+<p></p>
+  <div class="form-group input-group">
+    <div class="input-group-prepend">
+      <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+    </div>
+    <input name="" class="form-control" placeholder="Ad Soyad" type="text" [formControl]="adSoyad">
+  </div>
+  <div class="form-group">
+    <button (click)="onSubmit()" class="btn btn-success btn-block"> Varsayılan İsmi Yaz</button>
+  </div>
+<p> Girilen İsim: {{adSoyad.value}}</p>
+<p> Girilen İsim: {{adSoyad.status}}</p>
+

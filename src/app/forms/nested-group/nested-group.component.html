@@ -1,0 +1,44 @@
+<h3>Nested FormGroup Örnek</h3>
+<p></p>
+<form [formGroup]="kisiForm" (ngSubmit)="onSubmit()">
+  <div class="form-group input-group">
+    <div class="input-group-prepend">
+      <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+    </div>
+    <input name="" class="form-control" placeholder="Ad Soyad" type="text" formControlName="adi">
+  </div>
+  <div class="form-group input-group">
+    <div class="input-group-prepend">
+      <span class="input-group-text"> <i class="fa fa-birthday-cake"></i> </span>
+    </div>
+    <input name="" class="form-control" placeholder="Yaşı" type="text" formControlName="yas">
+  </div>
+  <div class="form-group input-group">
+    <div class="input-group-prepend">
+      <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+    </div>
+    <input class="form-control" placeholder="Şifre" type="password" formControlName="sifre">
+  </div>
+  <div formGroupName="iletisim" class="border border-primary ">
+    <div class="form-group input-group mt-2">
+      <div class="input-group-prepend">
+        <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+      </div>
+      <input name="" class="form-control" placeholder="Email" type="email" formControlName="email">
+    </div>
+    <div class="form-group input-group">
+      <div class="input-group-prepend">
+        <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
+      </div>
+      <input name="" class="form-control" placeholder="Phone number" type="text" formControlName="telefon">
+    </div>
+  </div>
+  <div class="form-group mt-2 pull-right">
+    <button (click)="iletisimBilgileri()" class="btn btn-info"> Adı ve Telefon Varsayılan Değer Yaz</button>
+    <button type="submit" class="btn btn-success"> Kişiyi Kaydet</button>
+  </div>
+  <div class="form-group mt-1 pull-right">
+    <p><b>{{kisi|json}}</b></p>
+  </div>
+</form>
+

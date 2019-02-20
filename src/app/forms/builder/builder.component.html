@@ -1,0 +1,53 @@
+<h3>FormBuilder- FormArray Örnek</h3>
+<p></p>
+<form [formGroup]="kisiForm" (ngSubmit)="onSubmit()">
+  <div class="form-group input-group">
+    <div class="input-group-prepend">
+      <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+    </div>
+    <input name="" class="form-control" placeholder="Ad Soyad" type="text" formControlName="adi" >
+  </div>
+  <div class="form-group input-group">
+    <div class="input-group-prepend">
+      <span class="input-group-text"> <i class="fa fa-birthday-cake"></i> </span>
+    </div>
+    <input name="" class="form-control" placeholder="Yaşı" type="text" formControlName="yas" maxlength="2" min="1" max="10">
+  </div>
+  <div class="form-group input-group">
+    <div class="input-group-prepend">
+      <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+    </div>
+    <input class="form-control" placeholder="Şifre" type="password" formControlName="sifre">
+  </div>
+  <div formGroupName="iletisim" class="border border-primary ">
+    <div class="form-group input-group mt-2">
+      <div class="input-group-prepend">
+        <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+      </div>
+      <input name="" class="form-control" placeholder="Email" type="email" formControlName="email">
+    </div>
+    <div class="form-group input-group">
+      <div class="input-group-prepend">
+        <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
+      </div>
+      <input name="" class="form-control" placeholder="Phone number" type="text" formControlName="telefon">
+    </div>
+  </div>
+  <div formArrayName="hobiler" class="mt-2 border border-dark">
+    <div class="form-group input-group mt-2" *ngFor="let hobi of hobiler.controls; let i= index;">
+      <div class="input-group-prepend">
+        <span class="input-group-text"> <i class="fa fa-bookmark"></i> </span>
+      </div>
+      <input name="" class="form-control" placeholder="İlgi Alanı" type="text" [formControlName]="i">
+    </div>
+  </div>
+
+  <div class="form-group mt-2 pull-right">
+    <button class="btn btn-warning" (click)="yeniHobi()"> Yeni Hobi Ekle</button>
+    <button type="submit" class="btn btn-success" [disabled]="!kisiForm.valid"> Kaydet</button>
+  </div>
+</form>
+<div class="form-group mt-1">
+  <p><b> Form Durumu:{{ kisiForm.status ==='INVALID' ? 'Ad Alanı Zorunlu En az 5 Karakter Uzunluğunda olmalı': 'Bilgiler Doğru Kaydedilebilir' | json }}</b></p>
+  <p><b>{{ this.kisi | json }}</b></p>
+</div>
