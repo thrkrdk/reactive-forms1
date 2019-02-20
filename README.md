@@ -1,6 +1,6 @@
 # ReactiveForms1
 
-[Angular: Gücümü Reactive Forms’a Borçluyum](https://medium.com/@thrkardak/angular-reactive-forms-i%CC%87le-g%C3%BC%C3%A7l%C3%BC-formlar-yaratmak-b844176cbead)
+[Angular: Gücümü Reactive Forms’a Borçluyum](https://medium.com/@thrkardak/angular-reactive-forms-i%CC%87le-g%C3%BC%C3%A7l%C3%BC-formlar-yaratmak-b844176cbead) yazısının kaynak kodlarıdır
 
 ## Development server
 
