@@ -1,6 +1,6 @@
 # ReactiveForms1
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.0.
+Angular: Gücümü Reactive Forms’a Borçluyum(https://medium.com/@thrkardak/angular-reactive-forms-i%CC%87le-g%C3%BC%C3%A7l%C3%BC-formlar-yaratmak-b844176cbead)
 
 ## Development server
 
